@@ -9,7 +9,14 @@ import { UserService } from './service/user.service';
 })
 export class AppComponent {
   title = 'The good Angular programmer';
-
+  currentUser: User = new User();
+  users = UserService;
   constructor() {}
+
+  onSelectUser(user: User): void {
+    this.currentUser = user;
+  }
+
+  
 
 }
